@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+        <file>fonts/Oswald.ttf</file>
+        <file>fonts/Onest.ttf</file>
+        <file>fonts/JetBrainsMono.ttf</file>
+        <file>icons/key.svg</file>
+        <file>icons/key-dark.svg</file>
+        <file>icons/plus.svg</file>
+        <file>icons/search.svg</file>
+        <file>icons/copy.svg</file>
+        <file>icons/reset.svg</file>
+        <file>icons/lock.svg</file>
+        <file>icons/trash.svg</file>
+        <file>icons/check.svg</file>
+        <file>icons/cut.png</file>
+        <file>icons/cut-hover.png</file>
+        <file>icons/cut-disabled.png</file>
+        <file>icons/cut-logo.png</file>
+    </qresource>
+</RCC>

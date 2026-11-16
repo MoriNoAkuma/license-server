@@ -1,0 +1,68 @@
+/* кольори і шрифти з дизайну Nirvana */
+QMainWindow { background: #030206; }
+QDialog, QMessageBox { background: #070610; }
+QWidget { color: #f2f1f6; font-family: "Onest"; font-size: 15px; }
+QToolTip { background: #100d1b; color: #f2f1f6; border: 1px solid #635f7b; }
+
+#pageScroll, #pageScroll > QWidget, #page { background: transparent; }
+#header { background: #070610; border-bottom: 1px solid #221e31; }
+#brand { font-family: "Oswald"; font-size: 20px; font-weight: 600; }
+#logo { border-image: url(:/icons/cut-logo.png) 6 6 6 6 stretch stretch; border-width: 6px; }
+#chip { background: #100d1b; border: 1px solid #221e31; border-radius: 12px; padding: 4px 12px; font-size: 13px; font-weight: 600; }
+
+#h1 { font-family: "Oswald"; font-size: 32px; font-weight: 600; }
+#kicker { font-family: "JetBrains Mono"; font-size: 11px; font-weight: 500; color: #868492; }
+#kickerUv { font-family: "JetBrains Mono"; font-size: 11px; font-weight: 500; color: #d4a3ff; }
+#kickerOk { font-family: "JetBrains Mono"; font-size: 11px; font-weight: 500; color: #1ad1d1; }
+#mono { font-family: "JetBrains Mono"; font-size: 13px; color: #868492; }
+#muted { color: #aba9b7; }
+#hint { color: #868492; font-size: 13px; }
+#label { font-size: 13px; font-weight: 600; }
+#strong { font-weight: 600; }
+#value { font-family: "JetBrains Mono"; font-size: 13px; }
+#valueMuted { font-family: "JetBrains Mono"; font-size: 13px; color: #aba9b7; }
+
+#card, #panel { background: #070610; border: 1px solid #221e31; border-radius: 8px; }
+#stat { font-family: "JetBrains Mono"; font-size: 32px; font-weight: 600; }
+#selKey { font-family: "JetBrains Mono"; font-size: 18px; font-weight: 600; color: #d4a3ff; }
+#keyPanel { background: #100d1b; border-radius: 4px; }
+#bigKey { font-family: "JetBrains Mono"; font-size: 26px; font-weight: 700; color: #d4a3ff; }
+#line { background: #221e31; max-height: 1px; min-height: 1px; border: 0; }
+
+/* кнопки */
+QPushButton { min-height: 38px; padding: 0 16px; background: transparent; border: 1px solid #635f7b; border-radius: 4px;
+              font-family: "Oswald"; font-size: 14px; font-weight: 600; }
+QPushButton:hover { border-color: #d4a3ff; color: #d4a3ff; }
+QPushButton:disabled { color: #5f5c6e; border-color: #2f2b40; }
+/* скошені кути - картинкою, бо clip-path у QSS немає; з border-radius картинка не ріжеться */
+QPushButton#primary { border-image: url(:/icons/cut.png) 10 10 10 10 stretch stretch; border-width: 10px; border-radius: 0;
+                      min-height: 24px; padding: 0 12px; color: #0b0618; font-size: 16px; }
+QPushButton#primary:hover { border-image: url(:/icons/cut-hover.png) 10 10 10 10 stretch stretch; color: #0b0618; }
+QPushButton#primary:disabled { border-image: url(:/icons/cut-disabled.png) 10 10 10 10 stretch stretch; color: #2a2238; }
+QPushButton#danger { border-color: #fb5b40; color: #fb5b40; }
+QPushButton#danger:hover { background: rgba(251, 91, 64, 0.14); }
+QPushButton#iconBtn { min-height: 34px; min-width: 34px; max-width: 34px; padding: 0; }
+
+/* фільтр */
+#tabs { background: #100d1b; border-radius: 8px; }
+#tabs QPushButton { min-height: 32px; border: 0; padding: 0 12px; font-family: "Onest"; font-size: 13px; color: #aba9b7; }
+#tabs QPushButton:hover { color: #f2f1f6; }
+#tabs QPushButton:checked { background: #b876ff; color: #0b0618; }
+
+QLineEdit, QPlainTextEdit { background: #100d1b; border: 1px solid #635f7b; border-radius: 4px; padding: 0 10px; min-height: 38px;
+                            selection-background-color: #b876ff; selection-color: #0b0618; }
+QPlainTextEdit { padding: 6px 6px; }
+QLineEdit:focus, QPlainTextEdit:focus { border-color: #cbec41; }
+
+/* таблиця */
+QTableWidget { background: transparent; border: 0; border-top: 1px solid #221e31; outline: 0;
+               selection-background-color: #201632; selection-color: #f2f1f6; }
+QTableWidget::item { border-bottom: 1px solid #221e31; padding: 0 8px; }
+QTableWidget::item:selected { background: #201632; }
+QHeaderView::section { background: transparent; color: #868492; border: 0; border-bottom: 1px solid #221e31; padding: 10px 8px;
+                       font-family: "JetBrains Mono"; font-size: 11px; font-weight: 500; }
+QScrollBar:vertical { background: transparent; width: 10px; }
+QScrollBar:horizontal { background: transparent; height: 10px; }
+QScrollBar::handle { background: #221e31; border-radius: 4px; min-height: 30px; min-width: 30px; }
+QScrollBar::add-line, QScrollBar::sub-line { width: 0; height: 0; }
+QScrollBar::add-page, QScrollBar::sub-page { background: transparent; }

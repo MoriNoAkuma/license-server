@@ -1,0 +1,10 @@
+build/
+**/build/
+.qtcreator/
+*.user
+licenses.json
+license.json
+# звіт і нотатки до захисту - не для репозиторію
+*.docx
+*.pdf
+Підказки_до_захисту_*.md
