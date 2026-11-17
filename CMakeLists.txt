@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Network)
 qt_standard_project_setup()
+set(CMAKE_AUTORCC ON) # resources.qrc: шрифти, іконки, style.qss
 
 # ядро без GUI: модель, сховище, мережевий сервер - переживе заміну інтерфейсу
 qt_add_library(licensecore STATIC
