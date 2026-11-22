@@ -70,6 +70,8 @@ int main(int argc, char* argv[]){
     assert(!otherPc.check() && otherPc.getMessage().contains("іншому"));
     LicenseClient wrongKey("LIS-0000-0000-0000", url, "pc2");
     assert(!wrongKey.check() && wrongKey.getMessage().contains("не знайдено"));
+    LicenseClient lowerCase(key.toLower(), url, "pc2"); // ключ, набраний малими літерами
+    assert(lowerCase.check());
     loaded.setBlocked(key, true);
     assert(!ok.check() && ok.getMessage().contains("заблокована"));
     loaded.setBlocked(key, false);

@@ -39,7 +39,7 @@ void LicenseServer::handle(QTcpSocket* socket){
         code = "404 Not Found";
     } else {
         QJsonObject req = QJsonDocument::fromJson(buf.mid(headerEnd + 4, len)).object();
-        reply = store.verify(req["license_key"].toString().trimmed(), req["hardware_id"].toString());
+        reply = store.verify(req["license_key"].toString().trimmed().toUpper(), req["hardware_id"].toString());
         reply["nonce"] = req["nonce"].toString(); // щоб стару відповідь не можна було підсунути вдруге
         reply["sig"] = QString(sign(reply));
         emit changed();
