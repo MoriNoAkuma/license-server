@@ -304,6 +304,7 @@ void MainWindow::refresh(){
     QString want = FILTERS[filters->checkedId()];
     QString query = search->text().trimmed();
     QSignalBlocker blocker(table); // перебудова таблиці не скидає вибір
+    bool selectedShown = false;
     table->setRowCount(0);
     for (const License& lic : all) {
         if (!want.isEmpty() && lic.status() != want) continue;
@@ -332,8 +333,9 @@ void MainWindow::refresh(){
         hw->setToolTip(hwid);
         table->setItem(row, 3, hw);
         table->setItem(row, 4, seen);
-        if (lic.getKey() == selected) table->selectRow(row);
+        if (lic.getKey() == selected) { table->selectRow(row); selectedShown = true; }
     }
+    if (!selectedShown) selected.clear(); // інакше дії в деталях зачеплять схований рядок
     shownLabel->setText(QString("Показано %1 з %2").arg(table->rowCount()).arg(all.size()));
     showDetails();
 }
